@@ -18,7 +18,7 @@
         <ion-note item-end>{{ item.Cantidad }}</ion-note>
       </ion-item>
       <ion-item-options side="left">
-        <button ion-button color="secondary" (click)='edit_item({{ item.id }}, {{ item.Nombre }}, {{ item.Cantidad }})'>
+        <button ion-button color="secondary" (click)='edit_item(item.id, item.Nombre, item.Cantidad)'>
           <ion-icon name="create"></ion-icon>
           Editar
         </button>
