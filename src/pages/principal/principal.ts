@@ -39,6 +39,7 @@ export class PrincipalPage {
     })
   }
 
+  // Añadir item
   add_item() {
     this.alertCtrl.create({
       title: 'Añada articulo y cantidad',
