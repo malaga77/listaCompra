@@ -68,4 +68,40 @@ export class PrincipalPage {
       console.error(err);
     });
   }
+
+  edit_articulo(id:string, Nombre: string, Cantidad: number){
+    this.listaColeccion.add({id, Nombre, Cantidad}).then(newItem => {
+
+    }).catch(err => {
+      console.error(err);
+    });
+  }
+
+  edit_item(id:string, Nombre: string, Cantidad: string){
+    this.alertCtrl.create({
+      title: 'Modifique los valores',
+      inputs: [{
+        name: 'Nombre',
+        placeholder: 'Articulo',
+        value: Nombre,
+      }, 
+      { name: 'Cantidad',
+        placeholder: 'Cantidad',
+        value: Cantidad}],
+      buttons: [{
+        text: 'Cancelar',
+        role: 'cancel'
+      }, {
+        text: 'Editar',
+        handler: data => {
+          this.edit_articulo(id, data.Nombre, data.Cantidad);
+        }
+      }]
+    }).present();
+  }
+
+  delete_item(){
+    // this.listaColeccion.ref(this.auth.getUser()).
+  }
+
 }
