@@ -49,7 +49,8 @@ export class PrincipalPage {
       }, 
       { name: 'Cantidad',
         placeholder: 'Cantidad',
-        type: 'number'}],
+        type: 'number',
+        value: '1'}],
       buttons: [{
         text: 'Cancelar',
         role: 'cancel'
@@ -110,4 +111,20 @@ export class PrincipalPage {
     });
   }
 
+  logout()
+{
+    this.alertCtrl.create({
+      title: '¿Desea cerrar sesión?',
+       buttons: [{
+        text: 'No',
+        role: 'cancel'
+      }, {
+        text: 'Si',
+        handler: () => {
+          this.auth.logout();
+        }
+      }]
+    }).present();
+  }
+  
 }
