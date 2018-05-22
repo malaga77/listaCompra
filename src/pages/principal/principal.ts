@@ -70,7 +70,7 @@ export class PrincipalPage {
   }
 
   edit_articulo(id:string, Nombre: string, Cantidad: number){
-    this.listaColeccion.add({id, Nombre, Cantidad}).then(newItem => {
+    this.listaColeccion.doc(id).update({Nombre, Cantidad}).then(newItem => {
 
     }).catch(err => {
       console.error(err);
@@ -100,8 +100,12 @@ export class PrincipalPage {
     }).present();
   }
 
-  delete_item(){
-    // this.listaColeccion.ref(this.auth.getUser()).
+  delete_item(id:string){
+    this.listaColeccion.doc(id).delete().then(() => {
+
+    }).catch(err => {
+      console.error(err);
+    });
   }
 
 }
