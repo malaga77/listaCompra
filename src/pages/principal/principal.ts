@@ -16,7 +16,7 @@ interface listaInterface {
   templateUrl: 'principal.html',
 })
 export class PrincipalPage {
-
+ 
   listaColeccion: AngularFirestoreCollection<listaInterface>;
   // lista: Observable<listaInterface[]>;
   lista: listaInterface[];
