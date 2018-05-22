@@ -48,7 +48,8 @@ export class PrincipalPage {
         placeholder: 'Articulo'
       }, 
       { name: 'Cantidad',
-        placeholder: 'Cantidad'}],
+        placeholder: 'Cantidad',
+        type: 'number'}],
       buttons: [{
         text: 'Cancelar',
         role: 'cancel'
@@ -87,6 +88,7 @@ export class PrincipalPage {
       }, 
       { name: 'Cantidad',
         placeholder: 'Cantidad',
+        type: 'number',
         value: Cantidad}],
       buttons: [{
         text: 'Cancelar',
